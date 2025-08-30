@@ -7,7 +7,7 @@ import WrapperThird from "./wrapper_third";
 import WrapperThanks from "./wrapper_thanks";
 
 const components = [WrapperFirst, WrapperSecond, WrapperThird, WrapperThanks];
-const duration = 50000;
+const duration = 15000;
 
 export default function WrappedPage() {
     const [currentIndex, setCurrentIndex] = useState(0);

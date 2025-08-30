@@ -13,7 +13,7 @@ export default function Home() {
   const handleOpen = () => {
     if (!isOpen) {
       setIsOpen(true);
-      const audio = new Audio("/backsoundAboutYou.mp3");
+      const audio = new Audio("/happyBirthday.mp3");
       audio.play();
     }
   };
@@ -52,15 +52,19 @@ export default function Home() {
           <div className={`relative w-full h-full cursor-pointer ${isOpen ? "open" : ""}`}>
             {/* Amplop tertutup */}
             <div
-              className={`absolute w-full h-full bg-pink-300 shadow-md shadow-gray-900 z-20 transition-transform duration-500 ease-out origin-top
-                ${isOpen ? "rotate-x-180" : ""}
+              className={`absolute w-full h-full rounded-t-4xl bg-pink-300 shadow-md shadow-gray-900 z-20 transition-transform duration-500 ease-out origin-top
+                ${isOpen ? "rotate-x-180 rounded-t-none" : ""}
               `}
               style={{
                 clipPath:
                   "polygon(0% 0%, 100% 0%, 100% 85%, 50% 100%, 0% 85%)",
                 boxShadow: "0 4px 20px rgba(0,0,0,0.2)",
               }}
-            ></div>
+            >
+              <h1 className="flex items-center justify-center h-full font-bold uppercase tracking-widest">
+                Click To Open❤️
+              </h1>
+            </div>
 
             {/* Amplop terbuka */}
             <div
@@ -89,8 +93,8 @@ export default function Home() {
             </div>
 
             {/* Stempel */}
-            <div className={`absolute top-2 right-5 w-[50px] h-[50px] ${isOpen ? "hidden" : ""} bg-yellow-400 text-pink-400 shadow-inner shadow-yellow-600 font-bold rounded-full flex items-center justify-center z-40`}>
-              POS
+            <div className={`absolute top-2 right-2 w-[50px] h-[50px] ${isOpen ? "hidden" : ""} bg-yellow-400 text-pink-400 shadow-inner shadow-yellow-600 font-bold rounded-full flex items-center justify-center z-40`}>
+              HBD
             </div>
           </div>
         </div>
