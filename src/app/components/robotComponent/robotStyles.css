@@ -1,0 +1,30 @@
+@keyframes float {
+  from{
+    transform: translateY(25px);
+  }to{
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceEye {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+#eyeLeft,
+#eyeRight,
+#nose {
+  animation: bounceEye 2s infinite;
+  box-shadow: 0 0 10px 2px #FFEDFA;
+}
+
+#robotsBody {
+  animation: float 2s infinite alternate ease-in-out;
+}
